@@ -3,6 +3,45 @@
 
 ---
 
+## How to Run
+
+**Requirements:** Python 3.8 or newer. No external packages are required; the standard library is enough.
+
+Clone the repository and enter it:
+
+```bash
+git clone https://github.com/tony7464/hash-table-ransom-note-lab.git
+cd hash-table-ransom-note-lab
+```
+
+From the repository root, run:
+
+```bash
+python test_ransom_note.py
+```
+
+A successful run ends with:
+
+```text
+🎉 All tests passed!
+```
+
+You can also run the same file with pytest:
+
+```bash
+python -m pytest test_ransom_note.py
+```
+
+---
+
+## Solution Approach
+
+`can_construct` stores magazine characters in a plain dictionary that maps each character to how many times it appears. It then scans the ransom note one character at a time and decrements that character's count. If a character is missing from the dictionary or its count is already zero, the function returns `False` immediately, before decrementing. It returns `True` only after every character in the note has been matched.
+
+Time complexity is O(m + n), where m is the length of `magazine` and n is the length of `ransomNote`. Space complexity is O(k), where k is the number of distinct characters in `magazine`.
+
+---
+
 ## Overview
 In this lab, you’ll apply **hash tables** to solve a classic technical challenge. You’ll implement a function that determines whether a **ransom note** can be constructed using the letters from a given **magazine**—with each letter only used once.
 

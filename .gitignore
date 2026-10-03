@@ -37,6 +37,7 @@ venv.bak/
 .nox/
 .cache/
 pytest_cache/
+.pytest_cache/
 coverage.xml
 *.cover
 *.py,cover
